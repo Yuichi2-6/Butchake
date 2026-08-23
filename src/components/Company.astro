@@ -1,0 +1,84 @@
+---
+const rows = [
+  { term: '法人名', desc: '株式会社BUTCHAKE' },
+  { term: '所在地', desc: '東京都千代田区麹町3丁目4番1号 夢心邸 内' },
+  { term: '代表者', desc: '須田樹一郎' },
+  { term: '設立', desc: '2022年6月' },
+];
+---
+
+<section id="company" class="company">
+  <div class="container">
+    <p class="eyebrow">COMPANY</p>
+    <h2>会社概要</h2>
+    <dl>
+      {
+        rows.map((r) => (
+          <>
+            <dt>{r.term}</dt>
+            <dd>{r.desc}</dd>
+          </>
+        ))
+      }
+    </dl>
+  </div>
+</section>
+
+<style>
+  .company {
+    padding: 96px 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--primary);
+    margin: 8px 0 48px;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    margin: 0;
+    border-top: 1px solid var(--border-15);
+  }
+
+  dt,
+  dd {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border-10);
+    margin: 0;
+  }
+
+  dt {
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    color: var(--ink-55);
+  }
+
+  dd {
+    font-size: 16px;
+  }
+
+  @media (max-width: 900px) {
+    .company {
+      padding: 56px 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+
+    dl {
+      grid-template-columns: 1fr;
+    }
+
+    dt {
+      border-bottom: none;
+      padding-bottom: 6px;
+    }
+
+    dd {
+      padding-top: 0;
+    }
+  }
+</style>

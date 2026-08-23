@@ -1,0 +1,149 @@
+---
+---
+
+<section id="club" class="club">
+  <div class="container grid">
+    <div class="copy">
+      <p class="eyebrow">CLUB BUTCHAKE</p>
+      <h2>招待制のコミュニティ</h2>
+      <p class="lead">
+        CLUB BUTCHAKEは千代田区でシェア農場や漁場に興味のある方向けのコミュニティになります。以下が参加条件になります。
+      </p>
+      <ul class="conditions">
+        <li>千代田区にお勤めの方</li>
+        <li>千代田区にお住まいの方</li>
+        <li>シェア農場や漁場に興味のある方</li>
+      </ul>
+
+      <div class="divider">
+        <p class="label">各会のご案内</p>
+        <a class="event-card" href="https://www.butchake.jp/club-butchake01">
+          <span>【受付完了】 2023年5月19日（金）鯛しゃぶの会@夢心邸</span>
+          <span class="arrow">→</span>
+        </a>
+        <p class="note">
+          会についてご質問がある場合は、<a href="https://www.butchake.jp">お問合せフォーム</a>よりご連絡ください。
+        </p>
+      </div>
+    </div>
+    <img src="/images/club.svg" alt="CLUB BUTCHAKE" width="910" height="638" />
+  </div>
+</section>
+
+<style>
+  .club {
+    background: var(--bg-dark);
+    color: var(--on-dark);
+    padding: 96px 32px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    padding: 0;
+    max-width: var(--max-width);
+  }
+
+  .eyebrow {
+    color: var(--accent-on-dark);
+  }
+
+  h2 {
+    font-size: 32px;
+    color: var(--on-dark-base);
+    margin-top: 8px;
+  }
+
+  .lead {
+    margin-top: 24px;
+    font-size: 15.5px;
+    color: var(--on-dark-82);
+  }
+
+  .conditions {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 12px;
+    font-size: 15.5px;
+    color: var(--on-dark-92);
+  }
+
+  .conditions li::before {
+    content: '◆ ';
+    color: var(--accent-on-dark);
+  }
+
+  .divider {
+    margin-top: 26px;
+    padding-top: 26px;
+    border-top: 1px solid var(--on-dark-border-20);
+  }
+
+  .label {
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    color: var(--accent-on-dark);
+    margin-bottom: 16px;
+  }
+
+  .event-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 22px;
+    background: var(--on-dark-surface-07);
+    border: 1px solid var(--on-dark-border-16);
+    color: var(--on-dark-base);
+    font-size: 15px;
+  }
+
+  .event-card:hover {
+    background: var(--on-dark-surface-13);
+    color: var(--on-dark-base);
+  }
+
+  .arrow {
+    color: var(--accent-on-dark);
+  }
+
+  .note {
+    margin-top: 20px;
+    font-size: 13.5px;
+    color: var(--on-dark-70);
+  }
+
+  .note a {
+    color: var(--accent-on-dark);
+    border-bottom: 1px solid rgba(217, 161, 137, 0.5);
+  }
+
+  .grid img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .club {
+      padding: 56px 20px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .grid img {
+      height: 260px;
+      order: -1;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+</style>

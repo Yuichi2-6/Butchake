@@ -1,0 +1,118 @@
+---
+const services = [
+  { no: '01', label: '単日だけでも勤務できるアルバイトの手配' },
+  { no: '02', label: 'お土産用商品の開発支援' },
+  { no: '03', label: '通販用商品の開発支援' },
+  { no: '04', label: 'シェア農場・シェア漁場の管理・運営' },
+  { no: '05', label: '農業や漁業などの一次産業とのマッチング' },
+];
+---
+
+<section id="services" class="services">
+  <div class="container">
+    <p class="eyebrow">SERVICES</p>
+    <h2>事業概要</h2>
+    <p class="lead">BUTCHAKE（ぶっちゃけ）は、飲食店に対して、以下をサービスとして準備しています。</p>
+
+    <div class="grid">
+      <ul class="list">
+        {
+          services.map((s) => (
+            <li>
+              <span class="no">{s.no}</span>
+              <span class="label">{s.label}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <img src="/images/services.svg" alt="事業概要" width="850" height="566" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 96px 32px;
+  }
+
+  h2 {
+    font-size: 32px;
+    letter-spacing: 0.06em;
+    color: var(--primary);
+    margin-top: 8px;
+  }
+
+  .lead {
+    font-size: 15.5px;
+    color: var(--ink-75);
+    margin-top: 16px;
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1px;
+    background: var(--border-12);
+  }
+
+  .list li {
+    background: var(--bg-base);
+    padding: 26px 28px;
+    display: flex;
+    gap: 22px;
+    align-items: baseline;
+  }
+
+  .list li:hover {
+    background: #ffffff;
+  }
+
+  .no {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--accent);
+    min-width: 30px;
+  }
+
+  .label {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+
+  .grid img {
+    width: 100%;
+    min-height: 380px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: 900px) {
+    .services {
+      padding: 56px 20px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+
+    .grid img {
+      min-height: 220px;
+      height: 220px;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+  }
+</style>

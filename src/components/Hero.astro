@@ -1,0 +1,134 @@
+---
+---
+
+<section id="top" class="hero">
+  <div class="container grid">
+    <div class="copy">
+      <p class="eyebrow">RESTAURANT × PRIMARY INDUSTRY</p>
+      <h1>飲食店が利益を出す<br />仕組みを、<span class="accent">ぶっちゃける。</span></h1>
+      <p class="lead">
+        BUTCHAKEは千代田区の飲食店向けの求人サービスを提供する企業です。また農業・漁業などの一次産業と飲食店も繋ぎます。
+      </p>
+      <div class="actions">
+        <a href="#services" class="btn btn-primary">事業概要を見る</a>
+        <a href="#club" class="btn btn-ghost">CLUB BUTCHAKE</a>
+      </div>
+    </div>
+    <div class="figure">
+      <div class="frame"></div>
+      <img src="/images/hero.svg" alt="BUTCHAKE" width="960" height="740" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding: 96px 32px 88px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 64px;
+    align-items: center;
+    padding: 0;
+    max-width: var(--max-width);
+  }
+
+  .eyebrow {
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--primary);
+  }
+
+  h1 .accent {
+    color: var(--accent);
+  }
+
+  .lead {
+    margin-top: 24px;
+    font-size: 16px;
+    max-width: 30em;
+    color: var(--ink-78);
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .btn {
+    padding: 15px 30px;
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    border-radius: 2px;
+  }
+
+  .btn-primary {
+    background: var(--primary);
+    color: var(--bg-base);
+  }
+
+  .btn-primary:hover {
+    background: var(--accent);
+    color: var(--bg-base);
+  }
+
+  .btn-ghost {
+    border: 1px solid var(--primary-border-35);
+    color: var(--primary);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--primary);
+    background: var(--primary-hover-bg);
+  }
+
+  .figure {
+    position: relative;
+  }
+
+  .frame {
+    position: absolute;
+    inset: 24px -24px -24px 24px;
+    border: 1px solid var(--primary-border-25);
+  }
+
+  .figure img {
+    position: relative;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    filter: saturate(0.92);
+  }
+
+  @media (max-width: 900px) {
+    .hero {
+      padding: 64px 20px 56px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    h1 {
+      font-size: 34px;
+    }
+
+    .frame {
+      inset: 16px -16px -16px 16px;
+    }
+
+    .figure img {
+      height: 300px;
+    }
+  }
+</style>

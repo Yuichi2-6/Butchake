@@ -1,0 +1,157 @@
+---
+---
+
+<header class="site-header">
+  <div class="container inner">
+    <a href="#top" class="logo">
+      <span class="logo-en">BUTCHAKE</span>
+      <span class="logo-ja">ぶっちゃけ</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle-btn" aria-label="メニューを開く">
+      <span></span>
+    </label>
+
+    <nav class="nav">
+      <a href="#about">About Us</a>
+      <a href="#club">CLUB BUTCHAKE</a>
+      <a href="#services">Services</a>
+      <a href="#company" class="cta">会社概要</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(247, 245, 240, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-10);
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 18px 32px;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1;
+  }
+
+  .logo-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    letter-spacing: 0.22em;
+    color: var(--primary);
+  }
+
+  .logo-ja {
+    font-size: 10px;
+    letter-spacing: 0.3em;
+    color: var(--ink-55);
+    color: rgba(35, 33, 29, 0.5);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+
+  .cta {
+    padding: 10px 20px;
+    background: var(--primary);
+    color: var(--bg-base);
+    border-radius: 2px;
+    letter-spacing: 0.12em;
+  }
+
+  .cta:hover {
+    background: var(--accent);
+    color: var(--bg-base);
+  }
+
+  .nav-toggle,
+  .nav-toggle-btn {
+    display: none;
+  }
+
+  @media (max-width: 900px) {
+    .inner {
+      padding: 16px 20px;
+    }
+
+    .nav-toggle-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+    }
+
+    .nav-toggle-btn span,
+    .nav-toggle-btn span::before,
+    .nav-toggle-btn span::after {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 1px;
+      background: var(--primary);
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .nav-toggle-btn span::before {
+      position: absolute;
+      top: -7px;
+    }
+
+    .nav-toggle-btn span::after {
+      position: absolute;
+      top: 7px;
+    }
+
+    .nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+      background: var(--bg-base);
+      border-bottom: 1px solid var(--border-10);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+    }
+
+    .nav a {
+      width: 100%;
+      padding: 16px 20px;
+      border-top: 1px solid var(--border-10);
+    }
+
+    .nav .cta {
+      margin: 16px 20px;
+      width: calc(100% - 40px);
+      text-align: center;
+    }
+
+    .nav-toggle:checked ~ .nav {
+      max-height: 400px;
+    }
+  }
+</style>

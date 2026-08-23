@@ -1,0 +1,49 @@
+---
+---
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div class="brand">
+      <p class="logo-en">BUTCHAKE</p>
+      <p class="addr">株式会社BUTCHAKE<br />東京都千代田区麹町3丁目4番1号 夢心邸 内</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border-12);
+    padding: 56px 32px;
+  }
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 0;
+    max-width: var(--max-width);
+  }
+
+  .logo-en {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 0.22em;
+    color: var(--primary);
+    margin: 0 0 8px;
+  }
+
+  .addr {
+    font-size: 12.5px;
+    color: var(--ink-60);
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .site-footer {
+      padding: 40px 20px;
+    }
+  }
+</style>
