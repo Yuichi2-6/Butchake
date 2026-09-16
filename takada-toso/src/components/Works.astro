@@ -1,0 +1,74 @@
+---
+const works = [
+  { img: '/images/work-1.svg', title: 'T様邸 外壁塗装', tag: '戸建て / 外壁' },
+  { img: '/images/work-2.svg', title: 'K様邸 屋根塗装', tag: '戸建て / 屋根' },
+  { img: '/images/work-3.svg', title: 'S様マンション 大規模修繕', tag: '共同住宅 / 外壁・防水' },
+];
+---
+
+<section id="works" class="works">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Works</p>
+      <h2>施工実績</h2>
+      <p>これまでの施工事例の一部をご紹介します。（本サイトはデモ用のダミー掲載です）</p>
+    </div>
+
+    <div class="grid">
+      {
+        works.map((w) => (
+          <div class="card">
+            <img src={w.img} alt={w.title} width="480" height="340" loading="lazy" />
+            <span class="tag">{w.tag}</span>
+            <h3>{w.title}</h3>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .works {
+    padding: 88px 32px;
+    background: var(--bg-alt);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 1px solid var(--border-10);
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+
+  .card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    color: var(--primary);
+  }
+
+  @media (max-width: 900px) {
+    .works {
+      padding: 56px 20px;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+</style>

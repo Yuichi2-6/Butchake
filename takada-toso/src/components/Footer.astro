@@ -1,0 +1,57 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container inner">
+    <div class="logo">
+      <span class="logo-main">高田塗装</span>
+      <span class="logo-sub">TAKADA TOSO</span>
+    </div>
+
+    <p class="note">
+      本サイトはインベストデザイン株式会社主催セミナー向けのデモ用ダミーサイトです。実在の企業・人物とは関係ありません。
+    </p>
+
+    <p class="copyright">&copy; {year} 高田塗装（デモサイト）</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background: var(--primary);
+    color: var(--on-dark-70);
+    padding: 48px 32px;
+  }
+
+  .inner {
+    text-align: center;
+  }
+
+  .logo-main {
+    font-family: 'Zen Old Mincho', serif;
+    font-size: 18px;
+    color: var(--on-dark);
+  }
+
+  .logo-sub {
+    display: block;
+    margin-top: 4px;
+    font-size: 10px;
+    letter-spacing: 0.3em;
+  }
+
+  .note {
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 1.8;
+    max-width: 560px;
+    margin-inline: auto;
+  }
+
+  .copyright {
+    margin-top: 24px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+</style>
